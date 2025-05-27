@@ -23,6 +23,17 @@
     ================================================== -->
 
     <link rel="manifest" href="site.webmanifest">
+    
+     <audio id="musik" src="music/musik.mp3" loop hidden></audio>
+
+  <script>
+    document.body.addEventListener('click', () => {
+      const audio = document.getElementById('musik');
+      audio.play().catch(e => {
+        console.warn('Gagal play audio:', e);
+      });
+    }, { once: true });
+  </script>
 
 </head>
 
